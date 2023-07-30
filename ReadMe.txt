@@ -4,6 +4,7 @@
 4. Create project-django-admin startproject TPS
 5.Go to TPS by "cd TPS" the make app - django-admin startapp resume
 6. Add app "resume" to settings.py 
+pip install pdfkit
 7.Create admin - py manage.py createsuperuser
     Username (leave blank to use 'acer'): admin
     Email address: admin@gmail.com

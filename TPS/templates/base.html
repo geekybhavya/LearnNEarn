@@ -571,11 +571,7 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li><a class="nav-link scrollto active" href="{% url 'home' %}">Home</a></li>
-        <li><a class="nav-link scrollto" href="{% url 'about' %}">About</a></li>
-        <li><a class="nav-link scrollto" href="{% url 'jobs' %}">Jobs</a></li>
-        <li><a class="nav-link scrollto" href="{% url 'notes' %}">Study Materials</a></li>
-        <li><a class="nav-link scrollto" href="{% url 'current_meeting' %}">Zoom Meeting</a></li>
-        <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
+        
         {% if request.user.is_authenticated %}
           <li><a class="nav-link scrollto" href="{% url 'logout' %}">Logout</a></li>
         {% else %}
@@ -593,7 +589,12 @@
            </ul>
           </li>
         {% endif %}
+        <li><a class="nav-link scrollto" href="{% url 'about' %}">About</a></li>
+        <li><a class="nav-link scrollto" href="{% url 'jobs' %}">Jobs</a></li>
+        <li><a class="nav-link scrollto" href="{% url 'notes' %}">Study Materials</a></li>
+        <li><a class="nav-link scrollto" href="{% url 'current_meeting' %}">Zoom Meeting</a></li>
         
+        <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
       
       {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
